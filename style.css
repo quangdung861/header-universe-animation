@@ -107,7 +107,7 @@ header {
   height: 6px;
   position: absolute;
   left: 50%;
-  top: 0px;
+  top: -2px;
   transform: translateX(-50%);
   background-color: beige;
   border-radius: 0px 0px 10px 10px;
