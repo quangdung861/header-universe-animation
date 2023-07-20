@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300;1,400&display=swap");
+* {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(11deg, #0f1829, #050812);
+}
+
+main {
+  min-height: 100%;
+  width: 100%;
+  max-width: 1380px;
+}
+
+header {
+  overflow: hidden;
+  position: relative;
+}
+
+.service-container {
+  transition: 1.3s ease;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: 1s ease;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.s-box-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding: 80px 12px;
+}
+
+.s-box-container img {
+  height: 75px;
+  width: 160px;
+  margin-bottom: 40px;
+}
+
+.s-box {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 0.5px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  max-width: 33%;
+  max-height: 100%;
+  width: 240px;
+  height: 400px;
+  padding: 20px 25px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.s-box h1 {
+  color: beige;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.s-box p {
+  color: antiquewhite;
+  font-size: 0.8rem;
+  font-weight: 100;
+  text-align: center;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* số dòng hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.s-box:hover {
+  color: #fff;
+  box-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 30px #fff, 0 0 60px #fff;
+  transition: all ease 0.5s;
+}
+
+.bar {
+  width: 100px;
+  height: 6px;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+  background-color: beige;
+  border-radius: 0px 0px 10px 10px;
+  display: none;
+  animation: bar 0.8s;
+}
+
+.s-box:hover .bar {
+  display: block;
+  color: #fff;
+  box-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 30px #fff, 0 0 60px #fff;
+}
+
+@media only screen and (max-width: 992px) {
+  .s-box-container {
+    gap: 60px;
+  }
+  .s-box p {
+    -webkit-line-clamp: 3; /* số dòng hiển thị */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .s-box-container {
+    gap: 30px;
+  }
+  .s-box-container img {
+    height: 50px;
+    width: 106px;
+    margin-bottom: 20px;
+  }
+  .s-box p {
+    -webkit-line-clamp: 2; /* số dòng hiển thị */
+  }
+  .s-box {
+    padding: 16px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .s-box-container {
+    gap: 20px;
+  }
+  .s-box h1 {
+    display: none;
+  }
+  .s-box-container img {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .bar {
+    width: 60px;
+  }
+  .s-box {
+    margin: 8px;
+    padding: 16px;
+  }
+}
+
+@media only screen and (max-width: 498px) {
+  .s-box-container img {
+    margin-bottom: 0px;
+  }
+  .s-box p {
+    display: none;
+  }
+}
